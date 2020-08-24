@@ -1,0 +1,18 @@
+[
+  '{{repeat(25)}}',
+  {
+    _id: '{{objectId()}}',
+     name: '{{firstName()}} {{surname()}}',
+    avatarImg: 'http://placehold.it/32x32',
+    source: '{{random("WHATSAPP", "TELEGRAM", "ЧАТ НА САЙТЕ", "ВКОНТАКТЕ")}}',
+    messages: [
+      '{{repeat(1, 6)}}',
+      {
+        id: '{{objectId()}}',
+        isMyMessage:'{{bool()}}',
+        time:'{{1598196527 - integer(1, 8196527)}}' ,
+        text: '{{lorem(1, "paragraphs")}}'
+      }
+    ]  
+  }
+]
